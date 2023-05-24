@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <h2>Sistema de Gerenciamento de Biblioteca</h2>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container hasBackdrop="false">
+  <mat-sidenav #sidenav opened="true">
+    <mat-nav-list>
+      <a *ngFor="let item of menu" mat-list-item routerLink="{{ item.routerLink }}">{{ item.name }}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
