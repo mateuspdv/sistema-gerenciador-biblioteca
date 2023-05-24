@@ -8,4 +8,6 @@
         http://www.liquibase.org/xml/ns/pro
         http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
 
+    <include file="db/changelog/files/20230523140520_create_table_customer.xml"></include>
+
 </databaseChangeLog>
