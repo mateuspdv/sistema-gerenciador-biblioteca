@@ -9,7 +9,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container hasBackdrop="false">
-  <mat-sidenav #sidenav opened="true">
+  <mat-sidenav #sidenav opened="true" mode="push">
     <mat-nav-list>
       <a *ngFor="let item of menu" mat-list-item routerLink="{{ item.routerLink }}">{{ item.name }}</a>
     </mat-nav-list>

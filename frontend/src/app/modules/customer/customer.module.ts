@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerListComponent } from './components/customer-list/customer-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { CustomerListComponent } from './components/customer-list/customer-list.
   ],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class CustomerModule { }
