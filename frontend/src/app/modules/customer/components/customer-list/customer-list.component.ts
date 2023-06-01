@@ -5,6 +5,8 @@ import { ViewCustomer } from '../../models/view-customer.model';
 import { CustomerService } from '../../services/customer.service';
 import { Column } from 'src/app/shared/models/column.model';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { CustomerFormComponent } from '../customer-form/customer-form.component';
 
 @Component({
   selector: 'app-customer-list',
@@ -23,7 +25,8 @@ export class CustomerListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private customerService: CustomerService) {}
+  constructor(private customerService: CustomerService,
+              public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -39,6 +42,12 @@ export class CustomerListComponent implements OnInit {
 
   getDisplayedColumns(): string[] {
     return this.columns.map(column => column.field);
+  }
+
+  openForm(): void {
+    const dialogRef = this.dialog.open(CustomerFormComponent);
+
+    dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
 }

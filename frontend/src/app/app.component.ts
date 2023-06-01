@@ -14,8 +14,4 @@ export class AppComponent {
     }
   ]
 
-  teste(): void {
-    console.log('Foi');
-  }
-
 }

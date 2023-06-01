@@ -1,3 +1,5 @@
+<button mat-raised-button color="primary" (click)="openForm()">Novo Cliente</button>
+
 <table mat-table [dataSource]="customers.content" class="mat-elevation-z8">
   <ng-container *ngFor="let column of columns" [matColumnDef]="column.field">
     <th mat-header-cell *matHeaderCellDef>{{ column.header }}</th>

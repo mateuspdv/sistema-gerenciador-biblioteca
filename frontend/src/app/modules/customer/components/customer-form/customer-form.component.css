@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
